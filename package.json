@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "build": "npx tsc && cp -rf data build/",
+    "watch": "npx tsc -w",
+    "start": "node build/app.js",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "gts": "^5.3.1",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "js-md5": "^0.8.3"
+  }
+}
