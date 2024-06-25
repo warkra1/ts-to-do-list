@@ -9,13 +9,4 @@ export class UserRepository extends AbstractFileRepository<User> {
   protected serialize(obj: User): any {
     return {login: obj.login, password: obj.password};
   }
-
-  exists(login: string): boolean {
-    try {
-      this.read(login);
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
 }
