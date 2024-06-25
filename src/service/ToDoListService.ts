@@ -2,9 +2,10 @@ import {ToDoListRepository} from '../repository/to_do_list_repository';
 import {User} from '../models/user';
 import {ToDoList} from '../models/ToDoList';
 import {ToDoItem} from '../models/to_do_item';
+import {RepositoryInterface} from '../repository/repository_interface';
 
 export class ToDoListService {
-  constructor(private repository: ToDoListRepository) {}
+  constructor(private repository: RepositoryInterface<ToDoList>) {}
 
   private createList(user: User): ToDoList {
     const list = new ToDoList([]);
